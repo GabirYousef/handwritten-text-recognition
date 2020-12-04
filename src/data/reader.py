@@ -169,12 +169,32 @@ class Dataset():
 
     def _gabir(self):
         """Gabir Dataset reader"""
-        dataset = self._init_dataset()
         pt_path = os.path.join(source, "Partitions")
         
         paths = {"train": open(os.path.join(pt_path, "TrainLines.lst")).read().splitlines(),
                  "valid": open(os.path.join(pt_path, "ValidationLines.lst")).read().splitlines(),
                  "test": open(os.path.join(pt_path, "TestLines.lst")).read().splitlines()}
+
+
+        transcriptions = os.path.join(source, "Transcriptions")
+        gt = os.listdir(transcriptions)
+        gt_dict = dict()
+
+        for index, x in enumerate(gt):
+            text = " ".join(open(os.path.join(transcriptions, x)).read().splitlines())
+            text = html.unescape(text).replace("<gap/>", "")
+            gt_dict[os.path.splitext(x)[0]] = " ".join(text.split())
+
+        img_path = "/home/ec2-user/TextRecognitionDataGenerator/out-new/"
+        dataset = self._init_dataset()
+
+
+        for i in self.partitions:
+            for line in paths[i]:
+                dataset[i]['dt'].append(os.path.join(img_path, f"{line}.jpg"))
+                dataset[i]['gt'].append(gt_dict[line])
+
+        return dataset
 
     def _bentham(self):
         """Bentham dataset reader"""
