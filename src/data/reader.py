@@ -169,7 +169,7 @@ class Dataset():
 
     def _gabir(self):
         """Gabir Dataset reader"""
-        pt_path = os.path.join(source, "Partitions")
+        pt_path = os.path.join(self.source, "Partitions")
         
         paths = {"train": open(os.path.join(pt_path, "TrainLines.lst")).read().splitlines(),
                  "valid": open(os.path.join(pt_path, "ValidationLines.lst")).read().splitlines(),
