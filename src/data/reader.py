@@ -167,6 +167,15 @@ class Dataset():
 
         return dataset
 
+    def _gabir(self):
+        """Gabir Dataset reader"""
+        dataset = self._init_dataset()
+        pt_path = os.path.join(source, "Partitions")
+        
+        paths = {"train": open(os.path.join(pt_path, "TrainLines.lst")).read().splitlines(),
+                 "valid": open(os.path.join(pt_path, "ValidationLines.lst")).read().splitlines(),
+                 "test": open(os.path.join(pt_path, "TestLines.lst")).read().splitlines()}
+
     def _bentham(self):
         """Bentham dataset reader"""
 
