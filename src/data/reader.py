@@ -176,7 +176,7 @@ class Dataset():
                  "test": open(os.path.join(pt_path, "TestLines.lst")).read().splitlines()}
 
 
-        transcriptions = os.path.join(source, "Transcriptions")
+        transcriptions = os.path.join(self.source, "Transcriptions")
         gt = os.listdir(transcriptions)
         gt_dict = dict()
 
