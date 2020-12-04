@@ -14,7 +14,7 @@ import datetime
 import string
 
 # define parameters
-source = "bentham"
+source = "gabir"
 arch = "flor"
 epochs = 1000
 batch_size = 16
