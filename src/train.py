@@ -16,8 +16,8 @@ import string
 # define parameters
 source = "gabir"
 arch = "flor"
-epochs = 1000
-batch_size = 16
+epochs = 200
+batch_size = 48
 
 # define paths
 source_path = os.path.join("..", "data", f"{source}.hdf5")
