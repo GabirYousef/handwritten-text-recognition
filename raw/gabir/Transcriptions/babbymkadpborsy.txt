@@ -1,0 +1,1 @@
+conf gis string females credits

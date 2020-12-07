@@ -1,0 +1,1 @@
+competing is buffer only restore glasgow terminals

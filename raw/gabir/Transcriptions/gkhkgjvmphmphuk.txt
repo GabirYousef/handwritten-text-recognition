@@ -1,0 +1,1 @@
+electron progressive remove allocated family survivor

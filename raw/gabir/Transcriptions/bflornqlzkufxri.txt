@@ -1,0 +1,1 @@
+app baker build synthetic creatures dos

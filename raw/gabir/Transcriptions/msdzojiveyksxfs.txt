@@ -1,0 +1,1 @@
+glucose logging involved prefers low ranked locale

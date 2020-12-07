@@ -1,0 +1,1 @@
+gc acts gray t humidity gain

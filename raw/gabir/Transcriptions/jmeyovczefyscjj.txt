@@ -1,0 +1,1 @@
+activation snapshot nbc network forwarding

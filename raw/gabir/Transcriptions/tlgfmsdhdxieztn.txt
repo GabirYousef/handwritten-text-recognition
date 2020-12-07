@@ -1,0 +1,1 @@
+logic sphere q canvas filling extraction daniel

@@ -1,0 +1,1 @@
+rapids accepts constructed targets solomon instances

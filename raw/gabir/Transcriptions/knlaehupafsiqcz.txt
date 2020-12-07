@@ -1,0 +1,1 @@
+execute dx kick name addresses
