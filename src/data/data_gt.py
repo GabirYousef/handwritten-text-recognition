@@ -41,16 +41,17 @@ def get_filenames(ff):
 		print(cc)
 		cc += 1
 		# train files
-		if train_counter < 40000:
+		
+		if train_counter < 6000:
 			train_counter += 1
 			write_line("/home/gabir/Desktop/Active_Projects/Deeplance/David OCR project/handwritten-text-recognition/raw/gabir/Partitions/TrainLines.txt", names[i])
 			# Transcriptions
-			write_line("/home/gabir/Desktop/Active_Projects/Deeplance/David OCR project/handwritten-text-recognition/raw/gabir/Transcriptions/" + names[i] + ".txt", " ".join(transcriptions[i]))
-		elif valid_counter < 10000:
+			write_line("/home/gabir/Desktop/Active_Projects/Deeplance/David OCR project/handwritten-text-recognition/raw/gabir/Transcriptions/" + names[i] + ".txt", " ".join(transcriptions[i]).upper())
+		elif valid_counter < 2500:
 			valid_counter += 1
 			write_line("/home/gabir/Desktop/Active_Projects/Deeplance/David OCR project/handwritten-text-recognition/raw/gabir/Partitions/ValidationLines.txt", names[i])
 			# Transcriptions
-			write_line("/home/gabir/Desktop/Active_Projects/Deeplance/David OCR project/handwritten-text-recognition/raw/gabir/Transcriptions/" + names[i] + ".txt", " ".join(transcriptions[i]))
+			write_line("/home/gabir/Desktop/Active_Projects/Deeplance/David OCR project/handwritten-text-recognition/raw/gabir/Transcriptions/" + names[i] + ".txt", " ".join(transcriptions[i]).upper())
 
 		else:
 			write_line("/home/gabir/Desktop/Active_Projects/Deeplance/David OCR project/handwritten-text-recognition/raw/gabir/Partitions/TestLines.txt", names[i])
@@ -61,7 +62,7 @@ def get_filenames(ff):
 		
 
         
-get_filenames("/home/gabir/Desktop/Active_Projects/Deeplance/David OCR project/handwritten-text-recognition/gt.txt")
+get_filenames("/home/gabir/Desktop/Active_Projects/Deeplance/David OCR project/handwritten-text-recognition/gt_capital.txt")
 
 # imgs_dir = "/home/gabir/Desktop/Active_Projects/Deeplance/David OCR project/handwritten-text-recognition/out"
 # new_imgs = "/home/gabir/Desktop/Active_Projects/Deeplance/David OCR project/handwritten-text-recognition/new_out"
